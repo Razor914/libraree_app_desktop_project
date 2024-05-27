@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HasilPencarianBukuController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6d0101" height="190.0" layoutX="-270.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="2194.0" />
+      <ImageView fitHeight="156.0" fitWidth="374.0" layoutX="38.0" layoutY="23.0">
+         <image>
+            <Image url="@asset/Gambar/358e192e2400dde0477f6c0f2b98f03f.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtfieldjudulBuku" focusTraversable="false" layoutX="731.0" layoutY="101.0" prefHeight="40.0" prefWidth="764.0" promptText="Masukkan Judul buku yang ingin anda cari..." style="-fx-background-color: #FFFFFF; -fx-background-radius: 150;">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="21.0" fitWidth="29.0" layoutX="1451.0" layoutY="110.0">
+         <image>
+            <Image url="@asset/Gambar/aaca05e5c71001129cba8de9e1d21d81.png" />
+         </image>
+      </ImageView>
+      <Hyperlink fx:id="tombolKembali" layoutX="1410.0" layoutY="46.0" onAction="#returnToMainPageButtonAction" prefHeight="38.0" prefWidth="95.0" text="Kembali" textFill="WHITE">
+         <font>
+            <Font name="PMingLiU-ExtB" size="24.0" />
+         </font>
+      </Hyperlink>
+      <ImageView fitHeight="566.0" fitWidth="559.0" layoutX="548.0" layoutY="263.0" opacity="0.1">
+         <image>
+            <Image url="@asset/Gambar/7c782ee62cae4c8a3fc4ec3d1bb2db4a.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="labelKataKunci" layoutX="68.0" layoutY="235.0" text="‘’">
+         <font>
+            <Font name="PMingLiU-ExtB" size="25.0" />
+         </font>
+      </Label>
+      <ListView fx:id="listHasilPencarian" layoutX="82.0" layoutY="276.0" prefHeight="566.0" prefWidth="750.0" />
+   </children>
+</Pane>

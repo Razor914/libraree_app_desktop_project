@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainPageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6d0101" height="1080.0" stroke="BLACK" strokeType="INSIDE" width="541.0" />
+      <ImageView fitHeight="176.0" fitWidth="446.0" layoutX="48.0" layoutY="364.0">
+         <image>
+            <Image url="@asset/Gambar/358e192e2400dde0477f6c0f2b98f03f.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="627.0" fitWidth="705.0" layoutX="690.0" layoutY="139.0" opacity="0.1">
+         <image>
+            <Image url="@asset/Gambar/7c782ee62cae4c8a3fc4ec3d1bb2db4a.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="511.0" layoutY="139.0" prefHeight="120.0" prefWidth="1122.0" text="Selamat Datang !" textAlignment="CENTER">
+         <font>
+            <Font name="PMingLiU-ExtB" size="64.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="503.0" layoutY="274.0" prefHeight="79.0" prefWidth="402.0" text="Judul Buku" textAlignment="CENTER">
+         <font>
+            <Font name="PMingLiU-ExtB" size="40.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCariJudul" focusTraversable="false" layoutX="619.0" layoutY="345.0" prefHeight="38.0" prefWidth="792.0" promptText="Masukkan Judul buku yang ingin anda cari..." style="-fx-background-color: #D9D9D9; -fx-border-radius: 15; -fx-background-radius: 150; -fx-padding: 10;">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <ImageView fx:id="searchButton" fitHeight="31.0" fitWidth="39.0" layoutX="1419.0" layoutY="350.0" onMouseClicked="#mencariBuku">
+         <image>
+            <Image url="@asset/Gambar/aaca05e5c71001129cba8de9e1d21d81.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="494.0" layoutY="376.0" prefHeight="48.0" prefWidth="446.0" text="Anda belum punya Akun?" textAlignment="CENTER">
+         <font>
+            <Font name="PMingLiU-ExtB" size="20.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="linkDaftarAkun" layoutX="826.0" layoutY="385.0" onAction="#mendaftarAkun" text="Daftar" textFill="#588100">
+         <font>
+            <Font name="PMingLiU-ExtB" size="20.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</Pane>
