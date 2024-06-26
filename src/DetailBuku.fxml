@@ -5,12 +5,14 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DetailBukuController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6d0101" height="190.0" layoutX="-270.0" layoutY="-11.0" stroke="BLACK" strokeType="INSIDE" width="2194.0" />
       <ImageView fitHeight="156.0" fitWidth="374.0" layoutX="38.0" layoutY="23.0">
@@ -18,18 +20,18 @@
             <Image url="@asset/Gambar/358e192e2400dde0477f6c0f2b98f03f.png" />
          </image>
       </ImageView>
-      <TextField fx:id="txtFieldCariBuku" focusTraversable="false" layoutX="731.0" layoutY="101.0" prefHeight="40.0" prefWidth="771.0" promptText="Masukkan Judul buku yang ingin anda cari..." style="-fx-background-color: #FFFFFF; -fx-background-radius: 150;">
+      <TextField fx:id="txtCariJudul" focusTraversable="false" layoutX="731.0" layoutY="101.0" onAction="#enterPressedOnTextField" prefHeight="40.0" prefWidth="778.0" promptText="Masukkan Judul buku yang ingin anda cari..." style="-fx-background-color: #FFFFFF; -fx-background-radius: 150;">
          <font>
-            <Font size="18.0" />
+            <Font name="Book Antiqua" size="18.0" />
          </font>
       </TextField>
-      <Hyperlink layoutX="1410.0" layoutY="46.0" prefHeight="38.0" prefWidth="95.0" text="Kembali" textFill="WHITE">
+      <Hyperlink fx:id="tombolKembali" layoutX="1410.0" layoutY="46.0" onAction="#backToPreviousPage" prefHeight="38.0" prefWidth="95.0" text="Kembali" textFill="WHITE">
          <font>
             <Font name="PMingLiU-ExtB" size="24.0" />
          </font>
       </Hyperlink>
-      <Circle fill="WHITE" layoutX="1526.0" layoutY="122.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
-      <ImageView fx:id="imgSearchButton" fitHeight="21.0" fitWidth="29.0" layoutX="1511.0" layoutY="111.0">
+      <Circle fill="WHITE" layoutX="1489.0" layoutY="121.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <ImageView fx:id="searchButton" fitHeight="21.0" fitWidth="29.0" layoutX="1475.0" layoutY="111.0" onMouseClicked="#mencariBuku">
          <image>
             <Image url="@asset/Gambar/aaca05e5c71001129cba8de9e1d21d81.png" />
          </image>
@@ -39,22 +41,12 @@
             <Image url="@asset/Gambar/7c782ee62cae4c8a3fc4ec3d1bb2db4a.png" />
          </image>
       </ImageView>
-      <Label fx:id="labelLokasiBuku" layoutX="687.0" layoutY="668.0" text="Lokasi Buku">
-         <font>
-            <Font name="PMingLiU-ExtB" size="30.0" />
-         </font>
-      </Label>
-      <Label fx:id="labelJudulBuku" layoutX="695.0" layoutY="286.0" text="Judul Buku">
-         <font>
-            <Font name="PMingLiU-ExtB" size="30.0" />
-         </font>
-      </Label>
       <Label layoutX="1116.0" layoutY="741.0" text="Ingin pinjam untuk dibawa pulang?">
          <font>
             <Font name="PMingLiU-ExtB" size="24.0" />
          </font>
       </Label>
-      <Hyperlink layoutX="1320.0" layoutY="769.0" prefHeight="38.0" prefWidth="146.0" text="Buat Akun?" textFill="#588100">
+      <Hyperlink fx:id="linkDaftarAkun" layoutX="1320.0" layoutY="769.0" onAction="#mendaftarAkun" prefHeight="38.0" prefWidth="146.0" text="Buat Akun?" textFill="#588100">
          <font>
             <Font name="PMingLiU-ExtB" size="24.0" />
          </font>
@@ -62,7 +54,29 @@
       <ImageView fx:id="imgBuku" fitHeight="331.0" fitWidth="343.0" layoutX="588.0" layoutY="329.0">
          <image>
             <Image url="@asset/Gambar/3590c4a2a43d1651729acbce42266956.png" />
-         </image>
-      </ImageView>
+         </image></ImageView>
+      <VBox alignment="CENTER" layoutX="217.0" layoutY="266.0" prefHeight="40.0" prefWidth="1068.0">
+         <children>
+            <Label fx:id="labelJudulBuku" alignment="CENTER" contentDisplay="CENTER" style="-fx-alignment: center;" textAlignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" layoutX="526.0" layoutY="693.0" prefHeight="28.0" prefWidth="468.0" style="-fx-spacing: 5;">
+         <children>
+            <Label fx:id="labelJudulBuku11" alignment="CENTER" text="Berada di" textAlignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="labelLokasiBuku" text="--" textAlignment="CENTER">
+               <font>
+                  <Font name="Book Antiqua" size="25.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
    </children>
 </Pane>
